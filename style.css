@@ -1,0 +1,428 @@
+/* *************UNIVERSAL************** */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    /****** BASE FONT SIZE!!! */
+    /* 18.5px */
+    font-size: 115.6%;
+}
+
+body {
+    font-family: 'Jost', 'Helvetica', sans-serif;
+    font-weight: 400;
+    line-height: 1.34;
+    color: #351800;
+    
+}
+
+
+/**** (((((((( every section 100% width )))))))) *****/
+nav, header, main, footer {
+    max-width: 100%
+}
+
+
+
+
+
+/* ************* GOOGLE FONTS ************** */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,500;0,600;0,700;1,600;1,700&family=Jost:ital,wght@0,200;0,300;0,400;0,600;0,800;1,200;1,300;1,400;1,800&family=Taviraj:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+
+
+/*
+font-family: 'Taviraj', 'Georgia', serif;
+font-family: 'Work Sans', 'Helvetica', sans-serif;
+*/
+
+/*
+font-family: 'Cormorant Infant', 'Georgia', serif;
+font-family: 'Jost', 'Helvetica', sans-serif;
+*/
+
+/* 
+font-family: 'Taviraj', 'Georgia', serif;
+font-family: 'Jost', 'Helvetica', sans-serif;
+*/
+
+h1, p {
+    font-family: 'Taviraj', 'Georgia', serif;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Jost', 'Helvetica', sans-serif;
+}
+
+
+p {
+    line-height: 1.7;
+    font-weight: 300;
+    color: #462a05;
+
+}
+h1 {
+    font-size: 3.157rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: .9;
+  }
+
+  h1 span {
+      text-transform: lowercase;
+  }
+  
+h2 {
+    font-size: 1.777rem;
+}
+  
+h3 {
+    font-size: 1.333rem;
+}
+  
+h4 {
+    font-size: 1rem;
+}
+  
+h5 {
+    font-size: 0.75rem;
+}
+  
+
+/* ************* NAVIGATION BAR ************** */
+nav {
+    max-width:100%;
+    max-height: 14vh;
+}
+
+.nav-container {
+    max-width: 90%;
+    max-height: 14vh;
+    height: 4rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-flex a{
+    text-decoration: none;
+}
+
+
+.burgermenu {
+    width: 30px;
+    margin: 0 .5em .33em 0;
+}
+
+.logo {
+    width: 150px;
+}
+
+
+.subscribe-flex {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.subscribe-flex a {
+    font-family: 'Jost', 'Helvetica', sans-serif;
+    font-size: .9rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+
+/* *************************************/
+/* ************* HEADER ************** */
+/* *************************************/
+header {
+   margin: 0 auto;
+   width: 100%;
+   height: 100vh;
+   
+   /* display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center; */
+
+   /* for parallax */
+   position: relative;
+   /* overflow: hidden; */
+
+}
+
+/**** (((((((( parallax hero img )))))))) *****/
+.parallax_1 {
+    position: absolute;
+    top: 140px;
+    left: 600px;
+    width: 47%;
+    z-index: -1;
+}
+.parallax_2 {
+    position: absolute;
+    top: 250px;
+    left: 240px;
+    width: 36%;
+    z-index: -1;
+}
+
+
+/**** (((((((( heading width )))))))) *****/
+
+.header-wrapper {
+    /* background-color: hsla(41, 72%, 83%, 0.447); */
+    margin: 0 auto;
+    padding-top: 80px;
+    width: 70%;
+}
+
+
+header h1 {
+    margin: 0 auto 2rem auto;
+}
+
+header .line {
+    margin: 2rem auto;
+    width: 200px;
+    border-bottom: 1px solid black;
+}
+
+.subtitle, .author_date {
+    text-align: center;
+    font-family: 'Jost', 'Helvetica', sans-serif;
+
+}
+
+
+.subtitle {
+    margin: 2rem auto;
+    width: 40%;
+    font-size: 1.5rem;
+    font-family: 'Jost', 'Helvetica', sans-serif;
+    font-weight: 300;
+    line-height: 1.3;
+    
+}
+
+.author_date {
+    margin: 0 auto;
+    font-size: 0.75rem;
+    font-style:normal;
+    color:rgb(78, 78, 78);
+
+}
+
+/**** (((((((( social icons )))))))) *****/
+.social-icons {
+    margin: 0 auto;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.social-icons img {
+    width: 40px;
+}
+
+
+/* *************************************/
+/* ****** MAIN ARTICLE SECTION ******** */
+/* *************************************/
+
+main {
+    width: 80%;
+    margin: -8rem auto 5rem auto;
+}
+
+article {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/**** (((((main article typesettings))))) *****/
+
+article p {
+    margin-bottom: 2rem;
+}
+
+
+article h2 , article h3{
+    margin-bottom: 1rem;
+}
+
+
+blockquote {
+    font-size: 2.8rem;
+    font-family: 'Taviraj', 'Georgia', serif;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+blockquote span {
+    font-size: 1.8rem;
+    font-family: 'Taviraj', 'Georgia', serif;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.quote-normal {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.quote-grid {
+    text-align: right;
+}
+
+
+.dolcegabbana_figure img {
+    width: 100%;
+}
+
+
+
+
+/**** (((((((( PRADA RENYLON PROJECT )))))))) *****/
+.prada-grid-container {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows:repeat(3, 1fr);
+    justify-content: center;
+}
+
+
+.prada-griditem1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+.prada-griditem2 {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+
+.prada-gridbox img {
+    width: 100%;
+}
+
+
+
+
+/**** (((((((( QUOTE GRID COLUMN )))))))) *****/
+
+.quote-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2%;
+}
+
+
+/**** (((((((( MORE CONTENT GRID COLUMN )))))))) *****/
+
+.morecontents {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.morecontent-grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    grid-column-gap: .7%;
+    grid-row-gap: 6%;
+    padding-bottom: 4em;
+}
+
+/* .morecontent-gridbox {
+    width: 400px;
+} */
+
+.morecontent-imgbox img {
+    width: 100%;
+}
+
+
+
+/* *************************************/
+/* ****** FOOTER SECTION ******** */
+/* *************************************/
+
+
+
+
+.grid_footer {
+    margin: 3rem auto 2rem auto;
+    max-width: 90%;
+    height: 50vh;
+    padding-top: 5em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 20% 80%;
+    justify-items: start;
+    align-items: start;
+    grid-column-gap: 6%;
+    grid-row-gap: 10%;
+}
+
+.item_1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.item_2 {
+    grid-column: 2 / span 4;
+    grid-row: 1;
+}
+
+.grid_footer .item_1 img {
+    width: 100%;
+}
+
+.grid_footer .item_2 img {
+    width: 40px;
+}
+
+.grid_footer h6{
+    font-size: .8rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+}
+
+.grid_footer p {
+    font-size: .9rem;
+    font-family: 'Jost', 'Helvetica', sans-serif;
+    font-weight: 300;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.grid_footer a {
+    text-decoration: none;
+}
+
+.copyright {
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+
+.copyright p {
+    color: black;
+    font-size: .9rem;
+    font-family: 'Jost', 'Helvetica', sans-serif;
+    font-weight: 300;
+}
