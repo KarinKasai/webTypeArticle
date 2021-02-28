@@ -95,10 +95,15 @@ h3, h4, h5, h6 {
 
 p {
     font-size: 1rem;
-    /* line height 31.45px */
-    line-height: 1.7em; 
+    /* line height 31.08px */
+    line-height: 1.68em; 
+
+    /* Line height formula for root 18.5px */
+    /* line-height: 1.125em; 
+    line-height: 1.25em; 
+    line-height: 1.375em;  */
     font-weight: 300;
-    /* letter-spacing: 0.2px; */
+    letter-spacing: 0.175px;
     /* word-spacing: -5px; */
 }
 
@@ -406,7 +411,10 @@ article {
     margin-bottom: 1rem;
 
 }
-
+/* paragraph to fix orphans  */
+.paragraph-group > .fix-orphan {
+    padding-right: 1rem;
+}
 
 /* text indent after each 2nd paragraph */
 .paragraph-group p+p {
@@ -429,7 +437,7 @@ article {
     border-bottom: rgb(228, 214, 219) ridge 3px;
 
     padding: 36px 5px 28px 5px;
-    margin: 11px 8px 6px 0;
+    margin: 10.3px 8px 3px 0;
   
 }
 
@@ -453,7 +461,7 @@ article {
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: 0;
+    bottom: 3px;
     height: 2px;
     background: currentColor;
 
@@ -689,9 +697,16 @@ blockquote span {
     grid-column: 1 / span 2;
     grid-row: 1;
 }
-.prada-griditem2 {
+.prada-griditem4 {
     grid-column: 1 / span 2;
     grid-row: 3;
+}
+
+.prada-griditem1, .prada-griditem4 {
+    height: 500px;
+}
+.prada-griditem2, .prada-griditem3 {
+    height: 320px;
 }
 
 
@@ -998,6 +1013,10 @@ form input[type="submit"]:hover {
     
     p {
         line-height: 1.58em; 
+    }
+    /* paragraph to fix orphans  */
+    .paragraph-group > .fix-orphan {
+        padding-right: 0;
     }
     /* space after 1 section of paragraph */
     .paragraph-group {
