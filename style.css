@@ -682,6 +682,7 @@ blockquote span {
 
 .prada-gridbox img {
     object-fit: cover;
+    width: 100%;
 }
 
 .prada-griditem1 {
@@ -693,9 +694,7 @@ blockquote span {
     grid-row: 3;
 }
 
-.prada-gridbox img {
-    width: 100%;
-}
+
 
 /* ******************************************/
 /* **** Subscribe Newsletter section ***** */
@@ -1022,7 +1021,7 @@ form input[type="submit"]:hover {
         line-height: 1;    
     }
     .author_date {
-        margin:0 auto;
+        margin:0 auto .4em auto;
         line-height: .9rem;
         font-size: 0.65rem;
     }
@@ -1030,7 +1029,6 @@ form input[type="submit"]:hover {
     header {
         width: 100%;
     }
-
 
     /**** (((((((( Paralllax image )))))))) *****/
     /* Desktop version invisible */
@@ -1042,6 +1040,8 @@ form input[type="submit"]:hover {
         flex-direction: row;
     }
     .mob1{
+        height: 320px;
+        object-fit:cover;
         width: 50%;
     }
 
@@ -1191,6 +1191,36 @@ form input[type="submit"]:hover {
     .subscribe-btn, .signin-btn {
         display: none;
         
+    }
+
+
+    /**** (((((((( Header Section )))))))) *****/
+    .header-wrapper {
+        margin: 2.6em auto 0 auto;
+        width:90%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        line-height: 1em;
+      }
+    .subtitle {
+        margin: 1.2rem auto 1.2rem auto;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.2;    
+    }
+    .author_date {
+        margin:0 auto .4rem auto;
+        line-height: .9rem;
+        font-size: 0.65rem;
+    }
+
+
+
+    main {
+        width: 100%;
+        margin: -1.4rem auto 2rem auto;
     }
     
     
