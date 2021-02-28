@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Taviraj:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* CSS Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+
+
+
 /* *************UNIVERSAL************** */
 * {
     margin: 0px;
@@ -9,13 +15,20 @@ html {
     /****** BASE FONT SIZE!!! */
     /* 18.5px */
     font-size: 115.6%;
+
+    /* Background GRID */
+    /* background: url(img/960_grid_16.png);
+    background-position: center center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover; */
 }
 
 body {
     font-family: 'Jost', 'Helvetica', sans-serif;
     font-weight: 400;
     line-height: 1.34;
-    color: #351800;
+    color: #160d02;
     
 }
 
@@ -25,14 +38,33 @@ nav, header, main, footer {
     max-width: 100%
 }
 
+/* each section width */
+/* 
+nav {
+    width: 100%;
+    height: 13vh;
+    position: fixed;
+}
+    
+header {
+    width: 100%;
+    height: 100vh;
+}
+    
+main {
+    width: 100%;
+    margin: -8rem auto 5rem auto;
+}
+
+article {
+    max-width: 650px;
+    margin: 0 auto;
+}*/
 
 
 
 
 /* ************* GOOGLE FONTS ************** */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,500;0,600;0,700;1,600;1,700&family=Jost:ital,wght@0,200;0,300;0,400;0,600;0,800;1,200;1,300;1,400;1,800&family=Taviraj:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
-
-
 /*
 font-family: 'Taviraj', 'Georgia', serif;
 font-family: 'Work Sans', 'Helvetica', sans-serif;
@@ -48,39 +80,56 @@ font-family: 'Taviraj', 'Georgia', serif;
 font-family: 'Jost', 'Helvetica', sans-serif;
 */
 
-h1, p {
+h1, h2, p, blockquote {
     font-family: 'Taviraj', 'Georgia', serif;
+    color: #160d02;
 }
 
-h2, h3, h4, h5, h6 {
+h3, h4, h5, h6, .subtitle, .author_date, .signin-btn, .subscribe-btn, .latestissue-btn, .latestissue-para, .newsletter-para, form input, .morecontents h1 span, .grid_footer p, .copyright p {
     font-family: 'Jost', 'Helvetica', sans-serif;
 }
 
+h3, h4, h5, h6 {
+    color: #160d02;
+}
 
 p {
-    line-height: 1.7;
+    font-size: 1rem;
+    /* line height 31.45px */
+    line-height: 1.7em; 
     font-weight: 300;
-    color: #462a05;
-
+    /* letter-spacing: 0.2px; */
+    /* word-spacing: -5px; */
 }
+
 h1 {
     font-size: 3.157rem;
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
     text-transform: capitalize;
-    line-height: .9;
+    line-height: 1.1em;
   }
 
-  h1 span {
+h1 span {
       text-transform: lowercase;
   }
   
 h2 {
     font-size: 1.777rem;
+    font-weight:400;
+    text-transform: capitalize;
+    line-height: 1.3em;
+    border-bottom: rgb(237, 233, 228) ridge 5px;
+    border-top: rgb(237, 233, 228) ridge 5px;
+    padding: .5em 0 .5em 0;
+      
 }
   
 h3 {
     font-size: 1.333rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.3em;
 }
   
 h4 {
@@ -88,20 +137,33 @@ h4 {
 }
   
 h5 {
-    font-size: 0.75rem;
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: .8rem;
+    text-transform: uppercase;
 }
   
 
 /* ************* NAVIGATION BAR ************** */
 nav {
-    max-width:100%;
-    max-height: 14vh;
+    width:100%;
+    height: 13vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 6px solid #462a05;
+    transition: height .5s ease;
+    background-color: rgb(237, 233, 228);
+    display: flex;
+    align-items: center;
 }
 
 .nav-container {
-    max-width: 90%;
-    max-height: 14vh;
-    height: 4rem;
+    width: 90%;
+    height: 13vh;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -109,37 +171,101 @@ nav {
     align-items: center;
 }
 
+.logo-flex {
+    display: flex;
+    align-items: center;
+}
+
 .logo-flex a{
     text-decoration: none;
 }
 
-
 .burgermenu {
     width: 30px;
-    margin: 0 .5em .33em 0;
+    margin-right: 8px;
+    transition: width .8s ease;
 }
 
 .logo {
-    width: 150px;
+    width: 140px;
+    transition: width .8s ease;
 }
+
 
 
 .subscribe-flex {
-    width: 300px;
+    width: 280px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
     
 }
 
-.subscribe-flex a {
-    font-family: 'Jost', 'Helvetica', sans-serif;
+.signin-btn, .subscribe-btn, .latestissue-btn {
     font-size: .9rem;
-    font-weight: 300;
     text-decoration: none;
-    color: black;
     text-transform: uppercase;
+    transition: font-size .8s ease;
 }
+
+.subscribe-box {
+    margin-right: .9em;
+}
+.subscribe-btn, .latestissue-btn {
+    padding: 0.5em 2.2em;
+    color: white;
+    font-weight: 300;
+    letter-spacing: .09em;
+    background-color:rgb(114, 23, 50);
+    border:rgb(228, 214, 219) double 4px;
+    transition: all 0.1s ease-in-out;
+    
+}
+
+.subscribe-btn:hover, .latestissue-btn:hover{
+    color:rgb(114, 23, 50);
+    background-color:rgb(237, 233, 228);
+    border:rgb(114, 23, 50) double 4px;
+    /* font-weight: 500; */
+    }
+
+.signin-btn {
+    color: #462a05;
+    font-weight: 400;
+    transition: all 0.1s ease-in-out;
+}
+
+.signin-btn:hover {
+    font-weight: 600;
+}
+
+/* Scroll Effect */
+
+.scrolling-active {
+    background: none;
+    box-shadow: 0 3px 1rem rgba(60, 33, 9, 0.1);
+    height: 10vh;
+    border-bottom: none;
+    /* border-bottom: 4px solid #462a055b; */
+}
+
+.scrolling-active .logo {
+    width: 110px;
+}
+
+.scrolling-active .burgermenu {
+    width: 25px;
+    margin-right: 6px;
+}
+
+.scrolling-active .signin-btn, .scrolling-active .subscribe-btn {
+    font-size: .7rem;
+}
+
+
+
+
+
 
 
 /* *************************************/
@@ -164,17 +290,23 @@ header {
 /**** (((((((( parallax hero img )))))))) *****/
 .parallax_1 {
     position: absolute;
-    top: 140px;
-    left: 600px;
-    width: 47%;
+    top: 390px;
+    left: 620px;
+    width: 40%;
     z-index: -1;
 }
 .parallax_2 {
     position: absolute;
-    top: 250px;
+    top: 460px;
     left: 240px;
     width: 36%;
     z-index: -1;
+}
+
+/* to make mobile version invisible */
+.mobileImg{
+    display: none;
+    
 }
 
 
@@ -182,45 +314,52 @@ header {
 
 .header-wrapper {
     /* background-color: hsla(41, 72%, 83%, 0.447); */
-    margin: 0 auto;
+    margin: 3.5em auto 0 auto;
     padding-top: 80px;
     width: 70%;
 }
 
 
 header h1 {
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 1.4rem auto;
 }
 
 header .line {
-    margin: 2rem auto;
-    width: 200px;
-    border-bottom: 1px solid black;
+    margin: 0 auto;
+    width: 100px;
+    border-bottom: 1px solid #160d02;
 }
-
-.subtitle, .author_date {
-    text-align: center;
-    font-family: 'Jost', 'Helvetica', sans-serif;
-
-}
-
 
 .subtitle {
-    margin: 2rem auto;
-    width: 40%;
+    margin: 1.2rem auto 1.2rem auto;
+    /* width: 40%; */
     font-size: 1.5rem;
-    font-family: 'Jost', 'Helvetica', sans-serif;
+    font-style: italic;
     font-weight: 300;
     line-height: 1.3;
     
 }
 
+
+.subtitle, .author_date {
+    text-align: center;
+
+}
+
 .author_date {
     margin: 0 auto;
+    line-height: 1rem;
     font-size: 0.75rem;
-    font-style:normal;
-    color:rgb(78, 78, 78);
+    color:rgb(182, 168, 152);
+}
 
+.author {
+    font-weight: 500;
+}
+
+.date {
+    font-weight: 300;
+    margin-bottom: .8rem;
 }
 
 /**** (((((((( social icons )))))))) *****/
@@ -243,66 +382,307 @@ header .line {
 /* *************************************/
 
 main {
-    width: 80%;
+    width: 100%;
     margin: -8rem auto 5rem auto;
 }
 
 article {
-    max-width: 680px;
+    max-width: 650px;
     margin: 0 auto;
 }
 
-/**** (((((main article typesettings))))) *****/
+/**** (((((main article spacings))))) *****/
 
-article p {
-    margin-bottom: 2rem;
+
+/* space after 1 section of paragraph */
+.paragraph-group {
+    margin-bottom: 4rem;
 }
 
-
-article h2 , article h3{
+/* space after 1 paragraph */
+.paragraph-group > p{
+    /* margin-bottom: .9rem; */
+    /* margin-bottom: 31.45px; */
     margin-bottom: 1rem;
+
 }
 
 
-blockquote {
-    font-size: 2.8rem;
-    font-family: 'Taviraj', 'Georgia', serif;
+/* text indent after each 2nd paragraph */
+.paragraph-group p+p {
+    text-indent: 1em;
+}
+
+/* space after h2 & h3 in each section */
+.paragraph-group > h2 , .paragraph-group > h3, .table-container h3{
+    margin-bottom: 1.2rem;
+}
+
+/**** (((((dropcap styling))))) *****/
+.dropcap:first-of-type::first-letter {
+    float: left;
+    line-height: 35px;
+    /* dropcap size */
+    font-size: 6.3em;
+    color: rgb(114, 23, 50);
+    border-top: rgb(228, 214, 219) ridge 3px;
+    border-bottom: rgb(228, 214, 219) ridge 3px;
+
+    padding: 36px 5px 28px 5px;
+    margin: 11px 8px 6px 0;
+  
+}
+
+
+/**** (((((hyperlink styling))))) *****/
+
+.hyperlink {
     font-weight: 500;
-    font-style: italic;
-    line-height: 1.2;
+    text-decoration: none;
+    color:rgb(114, 23, 50);
+    cursor: pointer;
+
+    /* for hover effect */
+    position: relative;
+      
 }
 
-blockquote span {
-    font-size: 1.8rem;
-    font-family: 'Taviraj', 'Georgia', serif;
-    font-style: italic;
+
+.hyperlink:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background: currentColor;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 280ms ease-in-out;
+  }
+
+  .hyperlink:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+  }
+  .hyperlink:visited {
+    color:rgb(182, 168, 152);
+  }
+  
+
+/**** (((((table styling))))) *****/
+
+/* table indent/ move right */
+.table-container {
+    margin: 0 auto;
+    width: 500px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border: rgb(237, 233, 228) double 3px;
+    margin-bottom: .8rem;  
+    
+}
+
+table tbody tr {
+    height: 50px;
+}
+
+table thead tr th, table tbody tr td, dl {
+    font-family: 'Jost', 'Helvetica', sans-serif;
+}
+
+
+table thead tr th{
+    color: rgb(114, 23, 50);
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: rgb(237, 233, 228);
+    padding: 14px 18px;
+}
+
+table tbody tr td {
+    font-size: 1rem;
+    padding: 12px 0 12px 18px;
+}
+
+table tbody tr td:nth-child(1) {
+    font-weight: 400;
+}
+
+table tbody tr td:nth-child(2) {
+    font-weight: 600;
+}
+
+sup {
+    font-size: .7rem;
     font-weight: 300;
 }
 
-.quote-normal {
-    text-align: center;
-    margin-bottom: 2rem;
+/**** (((((Defenition list styling))))) *****/
+
+dl {
+    padding-left: 1.1rem;
 }
+
+dl dt {
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+dl dt:after {
+    content: ' \00B7 \00B7 \00B7';
+}
+
+dl dd {
+    font-size: .8rem;
+    font-weight: 300;
+    padding: 0 0 .8rem .9rem;
+}
+
+
+/**** (((((IMAGE styling))))) *****/
+
+.dolcegabbana_figure img, .balenciaga_figure img {
+    width: 100%;
+    display:block;
+    margin: 0 auto;
+}
+
+
+figcaption {
+    font-size:.76em;
+    line-height: 1.6em;
+    color:  rgb(182, 168, 152);
+    margin:.7em 0;
+}
+
+.citation {
+    color:rgb(182, 168, 152);
+    text-decoration: none;
+    border-bottom: .8px solid rgb(182, 168, 152);
+    padding-bottom:.8px;
+}
+
+.citation:hover {
+    color: rgb(114, 23, 50);
+    border-bottom: .8px solid rgb(114, 23, 50);
+
+}
+
+/**** (((((Order list styling))))) *****/
+
+.designers-orderlist {
+    padding-left: 1.4rem;
+    list-style: decimal;
+}
+
+.designers-orderlist li {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: .4rem;
+}
+
+.designers-orderlist p {
+    font-weight: 300;
+    font-size: .9rem;
+    line-height: 1.5rem;
+    margin-bottom: .8rem;
+}
+
+
+/**** (((((Blockquote styling))))) *****/
+
+blockquote {
+    font-size: 2.3rem;
+    font-weight: 500;
+    font-style: italic;
+    
+}
+
+
+blockquote span {
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 300;
+    
+}
+
+.quote-normal {
+    line-height: 1.1;
+    border-bottom: rgb(237, 233, 228) ridge 5px;
+    border-top: rgb(237, 233, 228) ridge 5px;
+    text-align: center;
+    /* for quotation mark position */
+    position: relative;
+    margin: 5rem 0 2rem 0;
+    padding: 2.7rem 1rem 2rem 1rem;
+    
+}
+
+.quote-normal::before{
+    font-family: 'Taviraj', 'Georgia', serif;
+    content: "\201C";
+    color:rgb(237, 233, 228);
+    font-size:6em;
+    position: absolute;
+    top: -70px;
+    left: 240px;
+}
+
 .quote-grid {
     text-align: right;
+    line-height: 1.3;
+    /* for the quote to align bottom */
+    align-self: end;
+    /* for quotation mark position */
+    position: relative;
 }
 
-
-.dolcegabbana_figure img {
-    width: 100%;
+.quote-grid::before{
+    font-family: 'Taviraj', 'Georgia', serif;
+    content: "\201C";
+    color:rgb(237, 233, 228);
+    font-size:6em;
+    position: absolute;
+    top: -165px;
+    left: 100px;
 }
 
+/**** (((((((( QUOTE GRID COLUMN )))))))) *****/
 
+.quote-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3%;
+}
 
 
 /**** (((((((( PRADA RENYLON PROJECT )))))))) *****/
 .prada-grid-container {
     display: grid;
     grid-template-columns:repeat(2, 1fr);
-    grid-template-rows:repeat(3, 1fr);
-    justify-content: center;
+    /* grid-template-rows:1fr auto 1fr; */
+    grid-auto-rows: auto;
+    column-gap: 0;
+    row-gap:0;
+    
 }
 
+/* to fill up the extra gap between column */
+.prada-gridbox {
+    display: flex;
+}
+
+.prada-gridbox img {
+    object-fit: cover;
+}
 
 .prada-griditem1 {
     grid-column: 1 / span 2;
@@ -317,24 +697,109 @@ blockquote span {
     width: 100%;
 }
 
+/* ******************************************/
+/* **** Subscribe Newsletter section ***** */
+/* ******************************************/
 
+.latestissue-section {
+    margin: 2rem 0;
+}
 
+.latest-issue-container {
+    margin: 2rem 0;
+}
 
-/**** (((((((( QUOTE GRID COLUMN )))))))) *****/
+.latestissue-para {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    font-weight:500;
+}
 
-.quote-grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2%;
+.latestissue-btn {
+    display: inline-block;
+    margin: 1rem 0 .7rem 0;
 }
 
 
-/**** (((((((( MORE CONTENT GRID COLUMN )))))))) *****/
+.newsletter-container {
+    margin: 2rem 0;
+}
+
+.newsletter-para {
+    font-size: .9rem;
+    font-weight:300;
+}
+
+/**** (((((((( Subscribtion Form )))))))) *****/
+
+form {
+    width: 100%;
+}
+
+form input {
+    /* display: inline-block; */
+    font-size: 1rem;
+
+}
+
+form input[type="email"] {
+    width: 65%;
+    height: 45px;
+    border: .8px solid rgb(114, 23, 50);
+    padding: 0 1em;
+
+}
+
+form input[type="submit"] {
+    width: 30%;
+    height: 45px;
+    border: none;
+    color: white;
+    font-size: .9rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color:rgb(114, 23, 50);
+    cursor: pointer;
+    /* to fill the extra space between inputs */
+    position: relative;
+    left: -2%;
+    transition: all 0.1s ease-in-out;
+
+}
+
+form input[type="submit"]:hover {
+    color: rgb(114, 23, 50);
+    background-color:rgb(237, 233, 228);
+    border: .8px solid rgb(114, 23, 50);
+}
+
+/* *************************************/
+/* ****** More content SECTION ******** */
+/* *************************************/
 
 .morecontents {
     max-width: 90%;
     margin: 0 auto;
 }
+
+.morecontents span, .morecontents h1 {
+    text-transform: uppercase;
+}
+
+
+.morecontents h1 span {
+    font-size: 1.4rem;
+    font-weight:300;
+    line-height: .3rem;
+}
+
+.morecontents h1 {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+
+
 
 .morecontent-grid-container {
     width: 100%;
@@ -362,12 +827,9 @@ blockquote span {
 /* *************************************/
 
 
-
-
 .grid_footer {
-    margin: 3rem auto 2rem auto;
+    margin: 3rem auto 3.5rem auto;
     max-width: 90%;
-    height: 50vh;
     padding-top: 5em;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -375,7 +837,7 @@ blockquote span {
     justify-items: start;
     align-items: start;
     grid-column-gap: 6%;
-    grid-row-gap: 10%;
+    grid-row-gap: 20%;
 }
 
 .item_1 {
@@ -397,15 +859,12 @@ blockquote span {
 }
 
 .grid_footer h6{
-    font-size: .8rem;
-    text-transform: uppercase;
     margin-bottom: 10px;
 
 }
 
 .grid_footer p {
     font-size: .9rem;
-    font-family: 'Jost', 'Helvetica', sans-serif;
     font-weight: 300;
     text-transform: capitalize;
     margin-bottom: 8px;
@@ -421,8 +880,318 @@ blockquote span {
 }
 
 .copyright p {
-    color: black;
-    font-size: .9rem;
-    font-family: 'Jost', 'Helvetica', sans-serif;
+    font-size:.76em;
+    color:  rgb(182, 168, 152);
     font-weight: 300;
+}
+
+
+
+/* ******************************************/
+/* ************* Media Queries **************/
+/* ******************************************/
+
+@media screen and (max-width: 1000px) {
+
+
+    /**** (((((((( Header width )))))))) *****/
+    .header-wrapper {
+        margin: 3em auto 0 auto;
+        padding-top: 80px;
+        width: 85%;
+    }
+
+
+    /**** (((((((( FONT SIZE )))))))) *****/
+    h1 {
+        font-size: 2.976rem;
+        line-height: 1em;
+      }
+
+
+
+    /**** (((((((( Paralllax image )))))))) *****/
+    .parallax_1 {
+        position: absolute;
+        top: 390px;
+        left: 400px;
+        width: 40%;
+        z-index: -1;
+    }
+    .parallax_2 {
+        position: absolute;
+        top: 460px;
+        left: 200px;
+        width: 36%;
+        z-index: -1;
+    }
+    
+}
+
+@media screen and (max-width: 650px) {
+
+    /**** (((((((( NAV BAR )))))))) *****/
+    nav, .nav-container {
+        height: 10vh;
+    }
+
+    .burgermenu {
+        width: 24px;
+        margin-right: 5px;
+    }
+    
+    .logo {
+        width: 100px;
+    }
+
+    .signin-btn, .subscribe-btn {
+        font-size: .5rem;
+    }
+
+    .scrolling-active {
+        height: 8vh;
+    }
+    
+    .scrolling-active .logo {
+        width: 90px;
+    }
+    
+    .scrolling-active .burgermenu {
+        width: 20px;
+        margin-right: 4px;
+    }
+    
+    .scrolling-active .signin-btn, .scrolling-active .subscribe-btn {
+        font-size: .5rem;
+    }
+
+    /**** (((((((( Section width )))))))) *****/
+    .header-wrapper {
+        margin: 2.6em auto 0 auto;
+        padding-top: 65px;
+        width: 85%;
+    }
+
+    main {
+        width: 100%;
+        margin: -2.7rem auto 2rem auto;
+    }
+
+    article {
+        max-width: 90%;
+        margin:0 auto;
+    }
+
+
+    /**** (((((((( FONT SIZE )))))))) *****/
+    h1 {
+        font-size: 2.2rem;
+        line-height: 1em;
+      }
+
+    h2 {
+        font-size: 1.53rem;
+        font-weight:400;
+        line-height: 1.2em;
+        padding: .4em 0;
+          
+    }
+    
+    p {
+        line-height: 1.58em; 
+    }
+    /* space after 1 section of paragraph */
+    .paragraph-group {
+        margin-bottom: 2.3rem;
+    }
+    
+    /* space after 1 paragraph */
+    .paragraph-group > p{
+        margin-bottom: .8rem;
+    }
+
+    /**** (((((((( Header Section )))))))) *****/
+    header h1 {
+        margin: 0 auto .8rem auto;
+    }
+    
+    .subtitle {
+        margin: 1.2rem auto 1.2rem auto;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1;    
+    }
+    .author_date {
+        margin:0 auto;
+        line-height: .9rem;
+        font-size: 0.65rem;
+    }
+
+    header {
+        width: 100%;
+    }
+
+
+    /**** (((((((( Paralllax image )))))))) *****/
+    /* Desktop version invisible */
+    .desktopImg{
+        display: none;
+    }
+    .mobileImg{
+        display: flex;
+        flex-direction: row;
+    }
+    .mob1{
+        width: 50%;
+    }
+
+    /**** (((((dropcap styling))))) *****/
+    .dropcap:first-of-type::first-letter {
+        /* dropcap size */
+        font-size: 5.5em;
+        padding: 32px 5px 23px 5px;
+    }
+    
+
+    /**** (((((((( Table Section )))))))) *****/
+    .table-container {
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-content:center;
+        justify-items: center;
+    }
+           
+    table {
+        width: 100%;
+        margin-bottom: .8rem;  
+            
+    }
+
+    /**** (((((Blockquote styling))))) *****/
+
+    .quote-normal, .quote-grid {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+    
+    blockquote span {
+       font-size: 1.6rem;
+    }
+    .quote-normal {
+       /* for quotation mark position */
+       position: relative;
+       margin: 4rem 0 2rem 0;
+       padding: 2rem 1rem 1.6rem 1rem;
+    
+    }
+
+    .quote-normal::before{
+       font-family: 'Taviraj', 'Georgia', serif;
+       content: "\201C";
+       position: absolute;
+       top: -70px;
+       left: 35%;
+    }
+
+
+    /**** (((((Blockquote grid responsive))))) *****/
+    .quote-grid-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .quote-grid {
+        text-align: center;
+        /* for quotation mark position */
+        position: relative;
+        margin-top: 3.6rem;
+        margin-bottom: 2rem;
+    }
+    
+    .quote-grid::before{
+        font-family: 'Taviraj', 'Georgia', serif;
+        content: "\201C";
+        font-size:6em;
+        position: absolute;
+        top: -115px;
+        left: 35%;
+    }
+
+
+    /**** (((((Subscribe Newsletter section))))) *****/
+
+    .latest-issue-container {
+        margin: 0 0 1rem 0;
+    }
+
+    .latestissue-para {
+       font-size: 1.2rem;
+       line-height: 1.5rem;
+    }
+
+
+    /**** (((((more content grid))))) *****/
+    .morecontent-grid-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+    
+    .morecontent-gridbox {
+        margin-bottom: 2rem;
+    }
+    
+    .morecontent-imgbox img {
+        width: 100%;
+    }
+
+
+    .grid_footer {
+        margin: 1rem auto 2rem auto;
+        max-width: 90%;
+        /* height: 60vh; */
+        padding-top: 1em;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 10% 90%;
+        justify-items: start;
+        align-items: start;
+        grid-column-gap: 4%;
+        grid-row-gap: 23%;
+    }
+    
+    .item_1 {
+        grid-column: 1 / span 2;
+        grid-row: 1 ;
+    }
+    
+    .item_2 {
+        grid-column: 3 / span 4;
+        grid-row: 1;
+    }
+    
+    .grid_footer .item_1 img {
+        width: 100%;
+    }
+    
+    .grid_footer .item_2 img {
+        width: 40px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .subscribe-btn, .signin-btn {
+        display: none;
+        
+    }
+    
+    
 }
