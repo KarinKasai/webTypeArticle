@@ -1151,6 +1151,18 @@ form input[type="submit"]:hover {
        line-height: 1.5rem;
     }
 
+    /**** (((((prada project grid image))))) *****/
+    .prada-gridbox img {
+        object-fit: cover;
+        width: 100%;
+    }
+    .prada-griditem1, .prada-griditem4 {
+        height: 380px;
+    }
+    .prada-griditem2, .prada-griditem3 {
+        height: 220px;
+    }
+
 
     /**** (((((more content grid))))) *****/
     .morecontent-grid-container {
@@ -1240,6 +1252,18 @@ form input[type="submit"]:hover {
     main {
         width: 100%;
         margin: -1.4rem auto 2rem auto;
+    }
+
+    /**** (((((prada project grid image))))) *****/
+    .prada-gridbox img {
+        object-fit: cover;
+        width: 100%;
+    }
+    .prada-griditem1, .prada-griditem4 {
+        height: 280px;
+    }
+    .prada-griditem2, .prada-griditem3 {
+        height: 170px;
     }
     
     
